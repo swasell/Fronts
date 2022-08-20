@@ -33,6 +33,19 @@ class SLL {
         return this.head.value;
     }
 }
+    display() {
+        var allValues = "";
+        if (this.head == null) {
+            return allValues;
+        }
+        allValues += this.head.value;
+        var runner = this.head;
+        while(runner !== null) {
+            allValues += ", " + runner.value;
+            runner = runner.next;
+        }
+        return allValues;
+    }
 }
 
 var SLL1 = new SLL();
@@ -40,7 +53,7 @@ var SLL1 = new SLL();
 SLL1.addFront(18);
 SLL1.addFront(5);
 SLL1.addFront(73);
-console.log(SLL1);
-
-SLL1.removeFront();
-console.log(SLL1);
+// console.log(SLL1);
+console.log(SLL1.display());
+// SLL1.removeFront();
+// console.log(SLL1);
